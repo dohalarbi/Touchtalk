@@ -43,18 +43,14 @@ def play():
 	os.system('mpg321 piano2.wav &')
 	sleep(1);
 
-
-#quit the script
-def Exit():
-	sys.exit()
-
-
 #record audio wav file the 5 seconds
 def record():
         print("recording !!!")
         os.system("python record_audio1_1.py")
 
-	
+#quit the script
+def Exit():
+	sys.exit()	
 
 
 #Test buttons
