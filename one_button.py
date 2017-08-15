@@ -3,7 +3,7 @@
 
 
 from PIL import *
-from Tkinter import *	#library for gui
+from Tkinter import *	#library for gui for python 2.7
 from time import sleep
 import os, sys
 import pyaudio
