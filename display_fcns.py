@@ -27,19 +27,19 @@ gpio = GPIO.get_platform_gpio()
 import Adafruit_GPIO.SPI as SPI
 import os
     
-def display_image(cs,rst,port_num,image_name):
+def display_image(cs,reset,port_num, image_name):
 
     gpio.setup(cs, GPIO.OUT) #cs: 27,2, , 
     gpio.output(cs, GPIO.HIGH)
 
     # Raspberry Pi configuration.
     DC = 4 
-    RST = rst #rst: 17,22, ,
+    RST = reset #rst: 17,22, ,
     SPI_PORT = port_num
     SPI_DEVICE = 0
 
     # Create TFT LCD display class.
-    disp1 = TFT.ILI9341(DC, rst=RST, spi=SPI.SpiDev(SPI_PORT, SPI_DEVICE, max_speed_hz=64000000))
+    disp1 = TFT.ILI9341(DC, rst=RST, spi=SPI.SpiDev(SPI_PORT, SPI_DEVICE, max_speed_hz=640))
 
     image_path="/home/pi/touchtalk/Images/" + image_name
     
